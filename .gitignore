@@ -1,5 +1,6 @@
 vendor/
 web/bolt-public/
+web/kcfinder/
 web/files/*
 config/config_local.yml
 .idea/
