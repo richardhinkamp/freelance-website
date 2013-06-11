@@ -1,0 +1,11 @@
+$webroot: "/";
+
+$linkColor:             #44a7bb;
+$iconSpritePath:          "/img/bootstrap/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "/img/bootstrap/glyphicons-halflings-white.png";
+$baseBorderRadius: 5px;
+
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/variables";
+
+$baseFontFamily:        $sansFontFamily;
+$altFontFamily:         $serifFontFamily;

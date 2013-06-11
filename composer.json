@@ -1,0 +1,45 @@
+{
+    "name": "richardhinkamp/freelance-website",
+    "description": "Website about my freelance work",
+    "license": "MIT",
+    "type": "project",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/richardhinkamp/kcfinder"
+        }
+    ],
+    "require": {
+        "htmlawed/htmlawed": "dev-master",
+        "hautelook/phpass": "dev-master",
+        "garetjax/phpbrowscap": "*@dev",
+        "doctrine/dbal": "2.4.*@dev",
+        "doctrine/common": "2.4.*@dev",
+        "richardhinkamp/kcfinder": "dev-master",
+        "jlong/sass-twitter-bootstrap": "2.3.*",
+        "bolt/bolt": "dev-master"
+    },
+    "require-dev": {
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "post-install-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets",
+            "KCFinder\\Composer\\ScriptHandler::installAssets"
+        ],
+        "post-update-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets",
+            "KCFinder\\Composer\\ScriptHandler::installAssets"
+        ]
+    },
+    "extra": {
+        "bolt-web-dir": "web",
+        "bolt-dir-mode": "0755",
+        "kcfinder-web-dir": "web",
+        "kcfinder-assets-install": "relative",
+        "kcfinder-dir-mode": "0755"
+    }
+}

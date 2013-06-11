@@ -1,0 +1,26 @@
+{% extends "page.twig" %}
+
+{% block page_follow %}
+    {% import _self as macro %}
+
+    {% setcontent topics_expert = "topics" where { level: "Expert" } orderby '-prio' %}
+    {{ macro.topiclist("Ik weet veel over:",topics_expert) }}
+
+    {% setcontent topics_basic = "topics" where { level: "Standaard" } orderby '-prio' %}
+    {{ macro.topiclist("Verder zijn er ook de nodige technieken waar ik in de afgelopen 13 jaar af en toe mee in aanraking ben geweest:",topics_basic) }}
+{% endblock %}
+
+{% macro topiclist(intro,topics) %}
+    {% if topics|length > 0 %}
+        <p>{{ intro }}</p>
+        <ul class="topic-list">
+            {% for topic in topics %}
+                <li>
+                    <a name="{{ topic.slug }}"></a>
+                    <strong>{{ topic.title }}</strong><br>
+                    <span>{{ topic.body }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}

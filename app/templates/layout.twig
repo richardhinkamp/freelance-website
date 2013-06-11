@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="nl">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    {% if record is defined and record.description is defined %}
+        <meta name="description" content="{{ record.description|striptags }}">
+    {% endif %}
+    {% if app.config.general.debug == true %}
+        <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
+    {% endif %}
+    <title>{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.general.sitename }}{% endif %}</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/layout.css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/html5.js"></script>
+    {# <link rel="stylesheet" type="text/css" media="screen" href="/css/ie.css"> -#}
+    <![endif]-->
+</head>
+<body>
+
+<div class="main">
+    <div class="container">
+        <div class="hero-unit">
+            <p class="title">Richard Hinkamp</p>
+            <p class="sub-title">Freelance webdeveloper / software engineer</p>
+        </div>
+
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li{% if record is defined and record.link == "/info/home" %} class="active"{% endif %}><a href="/">Home</a></li>
+                    <li{% if record is defined and record.link == "/info/wie-ben-ik" %} class="active"{% endif %}><a href="/info/wie-ben-ik">Wie ben ik?</a></li>
+                    <li{% if record is defined and record.link == "/info/wat-maakt-mij-anders" %} class="active"{% endif %}><a href="/info/wat-maakt-mij-anders">Waarom mij kiezen?</a></li>
+                    <li{% if record is defined and record.link == "/info/huur-mij-in-voor" %} class="active"{% endif %}><a href="/info/huur-mij-in-voor">Huur mij in voor...</a></li>
+                    <li{% if record is defined and record.link == "/info/ik-weet-veel-over" %} class="active"{% endif %}><a href="/info/ik-weet-veel-over">Ik weet veel over...</a></li>
+                    <li{% if record is defined and record.link == "/info/contact" %} class="active"{% endif %}><a href="/info/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="span12">
+                {% block page_content %}{% endblock %}
+                {% block page_follow %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span3">
+                <p class="name">Richard Hinkamp</p>
+                <p>Freelance webdeveloper / software&nbsp;engineer</p>
+                <p class="copyright">&copy; Richard Hinkamp</p>
+            </div>
+            <div class="span3">
+                <dl>
+                    <dt>E-mail</dt>
+                    <dd>&#114;&#105;&#99;&#104;&#97;&#114;&#100;&#91;&#97;&#116;&#93;&#104;&#105;&#110;&#107;&#97;&#109;&#112;&#46;&#110;&#108;</dd>
+                    <dt>Telefoon</dt>
+                    <dd>0647484923</dd>
+                    <dt>Twitter</dt>
+                    <dd><a href="http://twitter.com/RichardHinkamp" target="_blank">@RichardHinkamp</a></dd>
+                </dl>
+            </div>
+            <div class="span3">
+                <p class="name">Links</p>
+                <ul class="unstyled">
+                    <li>
+                        <a href="http://nl.linkedin.com/in/richardhinkamp/" target="_blank" title="LinkedIn profiel van Richard Hinkamp">LinkedIn profiel</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/richardhinkamp" target="_blank" title="GitHub profiel van Richard Hinkamp">GitHub profiel</a>
+                    </li>
+                    <li>
+                        <a href="http://cv.richardhinkamp.nl/" target="_blank" title="Curriculum Vitae van Richard Hinkamp">Curriculum Vitae</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.richardhinkamp.nl/" target="_blank" title="Persoonlijk weblog van Richard Hinkamp">Persoonlijk weblog</a>
+                    </li>
+                    <li>
+                        <a href="http://dev.richardhinkamp.nl/" target="_blank" title="Development blog by Richard Hinkamp">Development blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="span3">
+                <p class="name">Kennis</p>
+                <ul class="inline topics">
+                    {% setcontent topics_expert = "topics" where { level: "Expert", prio: ">3" } %}
+                    {% for topic in topics_expert %}
+                        <a href="/info/ik-weet-veel-over#{{ topic.slug }}">{{ topic.title }}</a>
+                    {% endfor %}
+                    <a href="/info/ik-weet-veel-over" class="more">Meer...</a>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <p class="trade">Richard Hinkamp is een handelsnaam van Multum in Parvo B.V. en is geregistreerd bij de KvK Centraal Gelderland onder nummer 06092393.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

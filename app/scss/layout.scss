@@ -1,0 +1,162 @@
+@import "variables";
+
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/mixins";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/reset";
+
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/scaffolding";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/grid";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/layouts";
+
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/type";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/buttons";
+
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/navs";
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/navbar";
+
+body {
+    background-color:#000000;
+}
+
+.main {
+    width:100%;
+    background:url(../img/main.jpg) center 0 repeat;
+    border-top:#000000 5px solid;
+}
+
+.img-border {
+    border:#ebebec 4px solid;
+    border-radius:12px;
+}
+
+h1, h2, h3 {
+    font-family: "Oxygen",sans-serif;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+h1 {
+    font-size:34px;
+    line-height:45px;
+}
+
+h2 {
+    font-size:22px;
+    line-height:30px;
+}
+
+h3 {
+    font-size:18px;
+    line-height:26px;
+}
+
+.hero-unit {
+    padding-bottom: 1em;
+
+    .title {
+        @extend h1;
+        font-weight: bold;
+    }
+
+    .sub-title {
+        @extend h2;
+        font-style: italic;
+        font-weight: normal;
+    }
+}
+
+.navbar-inner {
+    padding-left: 0;
+}
+
+.index-blocks .index-block > div {
+    padding-left: 11px;
+    padding-right: 11px;
+
+    h2 {
+        margin-left: 0.5em;
+        font-size: 18px;
+        font-weight: bold;
+
+        a {
+            color: $textColor;
+        }
+    }
+
+    p {
+        margin: 0.5em;
+        font-size: 12px;
+        height: 100px;
+    }
+
+    .btn {
+        margin-left: 2em;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+.main {
+    padding-bottom: 20px;
+}
+
+.footer {
+    padding:32px 0 45px 0;
+
+    .row {
+        color: $grayLighter;
+
+        > div.span3 {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: ($gridColumnWidth * 3) + ($gridGutterWidth * (3 - 1)) - 40px;
+
+            .name {
+                font-weight: bold;
+            }
+
+            .copyright {
+                font-style: italic;
+            }
+
+            dl {
+                margin: 0;
+
+                dt {
+                    @extend p;
+                    margin-bottom: 0em;
+                }
+
+                dd {
+                    @extend p;
+                    margin-left: 0.5em;
+                }
+            }
+
+            a {
+                color: $grayLighter;
+            }
+
+            ul.topics {
+                a {
+                    &:after {
+                        content: ", ";
+                    }
+
+                    &.more {
+                        font-style: italic;
+                        &:after {
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+
+        .trade {
+            text-align: center;
+            font-style: italic;
+            font-size: 90%;
+        }
+
+    }
+}
