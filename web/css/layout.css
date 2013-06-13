@@ -2859,8 +2859,10 @@ h3 {
     font-style: italic;
     font-weight: normal; }
 
-.navbar-inner {
+.navbar .navbar-inner {
   padding-left: 0; }
+.navbar .brand {
+  display: none; }
 
 .index-blocks .index-block > div {
   padding-left: 11px;
@@ -2913,10 +2915,10 @@ h3 {
       padding-left: 2em;
       padding-right: 2em; }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   .navbar .brand {
-    display: none; }
-
+    display: inline; } }
+@media (min-width: 767px) {
   .index-blocks .index-block > div p, .index-blocks .index-block > div .footer .row-fluid > div.span3 dl dt, .footer .row-fluid > div.span3 dl .index-blocks .index-block > div dt, .index-blocks .index-block > div .footer .row-fluid > div.span3 dl dd, .footer .row-fluid > div.span3 dl .index-blocks .index-block > div dd {
     font-size: 12px;
     height: 100px; } }

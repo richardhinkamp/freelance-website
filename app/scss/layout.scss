@@ -75,8 +75,14 @@ h3 {
     }
 }
 
-.navbar-inner {
-    padding-left: 0;
+.navbar {
+    .navbar-inner {
+        padding-left: 0;
+    }
+
+    .brand {
+        display: none;
+    }
 }
 
 .index-blocks .index-block > div {
@@ -172,13 +178,15 @@ h3 {
     }
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
     .navbar {
         .brand {
-            display: none;
+            display: inline;
         }
     }
+}
 
+@media (min-width: 767px) {
     .index-blocks .index-block > div {
         p {
             font-size: 12px;
