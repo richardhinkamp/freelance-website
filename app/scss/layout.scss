@@ -13,6 +13,12 @@
 @import "../../vendor/jlong/sass-twitter-bootstrap/lib/navs";
 @import "../../vendor/jlong/sass-twitter-bootstrap/lib/navbar";
 
+%text-overflow-hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 body {
     background-color:#000000;
 }
@@ -76,6 +82,8 @@ h3 {
         margin-left: 0.5em;
         font-size: 18px;
         font-weight: bold;
+        height: 30px;
+        @extend %text-overflow-hidden;
 
         a {
             color: $textColor;

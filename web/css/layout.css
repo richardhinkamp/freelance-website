@@ -1787,6 +1787,11 @@ input[type="submit"].btn {
   .navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active {
     background-color: black \9; }
 
+.index-blocks .index-block > div h2, .index-blocks .index-block > div .hero-unit .sub-title, .hero-unit .index-blocks .index-block > div .sub-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 body {
   background-color: #000000; }
 
@@ -1833,9 +1838,11 @@ h3 {
   .index-blocks .index-block > div h2, .index-blocks .index-block > div .hero-unit .sub-title, .hero-unit .index-blocks .index-block > div .sub-title {
     margin-left: 0.5em;
     font-size: 18px;
-    font-weight: bold; }
+    font-weight: bold;
+    height: 30px; }
     .index-blocks .index-block > div h2 a, .index-blocks .index-block > div .hero-unit .sub-title a, .hero-unit .index-blocks .index-block > div .sub-title a {
-      color: #333333; }
+      color: #333333;
+      text-overflow: ellipsis; }
   .index-blocks .index-block > div p, .index-blocks .index-block > div .footer .row > div.span3 dl dt, .footer .row > div.span3 dl .index-blocks .index-block > div dt, .index-blocks .index-block > div .footer .row > div.span3 dl dd, .footer .row > div.span3 dl .index-blocks .index-block > div dd {
     margin: 0.5em;
     font-size: 12px;
