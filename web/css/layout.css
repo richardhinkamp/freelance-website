@@ -2839,7 +2839,8 @@ h1, .hero-unit .title, h2, .hero-unit .sub-title, h3 {
 
 h1, .hero-unit .title {
   font-size: 34px;
-  line-height: 45px; }
+  line-height: 45px;
+  letter-spacing: 1px; }
 
 h2, .hero-unit .sub-title {
   font-size: 22px;
@@ -2877,9 +2878,6 @@ h3 {
     margin-left: 2em;
     font-size: 12px;
     font-weight: bold; }
-
-.main {
-  padding-bottom: 20px; }
 
 .footer {
   background-color: #000;
