@@ -7,7 +7,7 @@
     {{ macro.topiclist("Ik weet veel over:",topics_expert) }}
 
     {% setcontent topics_basic = "topics" where { level: "Standaard" } orderby '-prio' %}
-    {{ macro.topiclist("Verder zijn er ook de nodige technieken waar ik in de afgelopen 13 jaar af en toe mee in aanraking ben geweest:",topics_basic) }}
+    {{ macro.topiclist("Verder zijn er ook de nodige technieken waar ik in de afgelopen 13 jaar ook mee in aanraking ben geweest:",topics_basic) }}
 {% endblock %}
 
 {% macro topiclist(intro,topics) %}
