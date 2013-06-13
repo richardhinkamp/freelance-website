@@ -10,6 +10,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/richardhinkamp/kcfinder"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/bolt/bolt"
         }
     ],
     "require": {
@@ -20,7 +24,7 @@
         "doctrine/common": "2.4.*@dev",
         "richardhinkamp/kcfinder": "dev-master",
         "jlong/sass-twitter-bootstrap": "2.3.*",
-        "bolt/bolt": "dev-master"
+        "bolt/bolt": "1.1.*"
     },
     "require-dev": {
     },
