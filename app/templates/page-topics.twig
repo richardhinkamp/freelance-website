@@ -16,8 +16,7 @@
         <ul class="topic-list">
             {% for topic in topics %}
                 <li>
-                    <a name="{{ topic.slug }}"></a>
-                    <strong>{{ topic.title }}</strong><br>
+                    <a name="{{ topic.slug }}"></a><strong>{{ topic.title }}</strong><br>
                     <span>{{ topic.body }}</span>
                 </li>
             {% endfor %}
