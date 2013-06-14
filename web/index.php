@@ -8,6 +8,10 @@
  * file that was distributed with this source code.
  */
 
+if (!extension_loaded('intl')) {
+    dl('intl.so');
+}
+
 require_once( '../vendor/bolt/bolt/app/bootstrap.php' );
 
 if ($app['debug']) {
