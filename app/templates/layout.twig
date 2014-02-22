@@ -7,10 +7,10 @@
     {% if record is defined and record.description is defined %}
         <meta name="description" content="{{ record.description|striptags }}">
     {% endif %}
-    {% if app.config.general.debug == true %}
+    {% if app.config.get('debug') == true %}
         <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
     {% endif %}
-    <title>{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.general.sitename }}{% endif %}</title>
+    <title>{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.get('sitename') }}{% endif %}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/layout.css">
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
@@ -68,8 +68,8 @@
                     <dl>
                         <dt>E-mail</dt>
                         <dd>&#114;&#105;&#99;&#104;&#97;&#114;&#100;&#91;&#97;&#116;&#93;&#104;&#105;&#110;&#107;&#97;&#109;&#112;&#46;&#110;&#108;</dd>
-                        <dt>Telefoon</dt>
-                        <dd>0647484923</dd>
+                        {#<dt>Telefoon</dt>
+                        <dd>0647484923</dd>#}
                         <dt>Twitter</dt>
                         <dd><a href="http://twitter.com/RichardHinkamp" target="_blank">@RichardHinkamp</a></dd>
                     </dl>
@@ -100,7 +100,11 @@
                 <div class="span3">
                     <p class="name">Kennis</p>
                     <ul class="inline topics">
-                        {% setcontent topics_expert = "topics" where { level: "Expert", prio: ">3" } %}
+                        {% setcontent topics_expert = "topics" where { level: "Expert", prio: "5" } %}
+                        {% for topic in topics_expert %}
+                            <a href="/info/ik-weet-veel-over#{{ topic.slug }}">{{ topic.title }}</a>
+                        {% endfor %}
+                        {% setcontent topics_expert = "topics" where { level: "Expert", prio: "4" } %}
                         {% for topic in topics_expert %}
                             <a href="/info/ik-weet-veel-over#{{ topic.slug }}">{{ topic.title }}</a>
                         {% endfor %}

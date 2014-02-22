@@ -10,21 +10,16 @@
         {
             "type": "vcs",
             "url": "https://github.com/richardhinkamp/kcfinder"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/bolt/bolt"
         }
     ],
     "require": {
-        "htmlawed/htmlawed": "dev-master",
+        "erusev/parsedown": "dev-master",
+        "garetjax/phpbrowscap": "dev-master",
         "hautelook/phpass": "dev-master",
-        "garetjax/phpbrowscap": "*@dev",
-        "doctrine/dbal": "2.4.*@dev",
-        "doctrine/common": "2.4.*@dev",
+        "ircmaxell/random-lib": "1.0.*@dev",
         "richardhinkamp/kcfinder": "dev-master",
         "jlong/sass-twitter-bootstrap": "2.3.*",
-        "bolt/bolt": "1.1.*"
+        "bolt/bolt": "dev-master"
     },
     "require-dev": {
     },
