@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0d5fe1795577430e2f7476b54365cb23",
+    "hash": "105be4d65e253fcd9288ac28ba657a75",
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "dev-master",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "55d84a3dc03baf05ce79e5e6482243e7a921a36d"
+                "reference": "2999dd3e8f0c947951b8e0c0d37585ad26115586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/55d84a3dc03baf05ce79e5e6482243e7a921a36d",
-                "reference": "55d84a3dc03baf05ce79e5e6482243e7a921a36d",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/2999dd3e8f0c947951b8e0c0d37585ad26115586",
+                "reference": "2999dd3e8f0c947951b8e0c0d37585ad26115586",
                 "shasum": ""
             },
             "require": {
@@ -75,7 +75,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2014-02-21 16:38:59"
+            "time": "2014-02-22 11:50:40"
         },
         {
             "name": "bolt/dumper",
@@ -2799,8 +2799,7 @@
         "garetjax/phpbrowscap": 20,
         "hautelook/phpass": 20,
         "ircmaxell/random-lib": 20,
-        "richardhinkamp/kcfinder": 20,
-        "bolt/bolt": 20
+        "richardhinkamp/kcfinder": 20
     },
     "platform": [
 
