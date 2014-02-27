@@ -19,7 +19,7 @@
         "ircmaxell/random-lib": "1.0.*@dev",
         "richardhinkamp/kcfinder": "dev-master",
         "jlong/sass-twitter-bootstrap": "2.3.*",
-        "bolt/bolt": "~1.5"
+        "bolt/bolt": "dev-master"
     },
     "require-dev": {
     },

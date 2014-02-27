@@ -53,7 +53,7 @@ search_results_records: 10
 # The list of enabled extensions. For Example:
 # GoogleAnalytics, FacebookLike, TwitterButton, FacebookComments, Disqus, RSSFeed, SimpleForms.
 # Read each 'readme.md' from the Bolt Extensions screen, to see what they do.
-enabled_extensions: [  ]
+enabled_extensions: [ Sitemap ]
 
 # Add jQuery to the rendered HTML, whether or not it's added by an extension.
 add_jquery: false
@@ -61,14 +61,6 @@ add_jquery: false
 # The default amount of records to show on overview pages. Can be overridden
 # for each contenttype.
 recordsperpage: 10
-
-# template to use for sitemap and sitemap.xml
-sitemap:
-    template: sitemap.twig
-    xml_template: sitemap_xml.twig
-    ignore:
-        - /info/home
-        - /info/error404
 
 # Default settings for thumbnails. Quality should be between 0 (horrible) and
 # 100 (best, huge image). Cropping is one of either crop, fit, borders, resize.

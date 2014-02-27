@@ -10,7 +10,7 @@
     {% if app.config.get('debug') == true %}
         <meta content="NOINDEX,NOFOLLOW" name="ROBOTS">
     {% endif %}
-    <title>{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.get('sitename') }}{% endif %}</title>
+    <title>{% block title_text %}{% if record.title is defined %}{{ record.title|striptags }}{% else %}{{ app.config.get('sitename') }}{% endif %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/layout.css">
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
